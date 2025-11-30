@@ -57,6 +57,7 @@ class WorkshopHelper:
 Configuración del Taller
 =====================
 Usuario: {self.username}
+Usuario Clean: {self.clean_username}
 Catálogo: {self.catalog_name}
 Directorio de trabajo: {self.working_dir}
 
