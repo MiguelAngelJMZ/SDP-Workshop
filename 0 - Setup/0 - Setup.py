@@ -80,7 +80,7 @@ DA.print_config()
 
 # Eliminar catálogo existente si existe (en cascada a todos los esquemas, tablas, volúmenes)
 try:
-    spark.sql(f"DROP SCHEMA IF EXISTS {DA.catalog_name}.{DA.default_schema} CASCADE")
+    spark.sql(f"DROP VOLUME IF EXISTS {DA.catalog_name}.{DA.default_schema}.raw")
     spark.sql(f"DROP SCHEMA IF EXISTS {DA.catalog_name}.{DA.bronze_schema} CASCADE")
     spark.sql(f"DROP SCHEMA IF EXISTS {DA.catalog_name}.{DA.silver_schema} CASCADE")
     spark.sql(f"DROP SCHEMA IF EXISTS {DA.catalog_name}.{DA.gold_schema} CASCADE")
